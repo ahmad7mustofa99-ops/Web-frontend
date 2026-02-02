@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>halaman tanpa css</title>
+    <script src="http://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+</head>
+<body class="bg-gray-50 font-sans">
+  <header>
+<nav class="bg-slate-800 text-white fixed w-full top-0">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="text-xl font-bold">
+BrandKita
+</div>
+<!-- M mobile -->
+<button id="menu-btn" class="md:hidden">
+<span class="material-symbols-outlined">
+menu
+</span>
+</button>
+<!-- Menu tampilan website -->
+<ul class="hidden md:flex gap-6">
+<li><a href="#home" class="hover:text-blue-400">Home</a></li>
+<li><a href="#about" class="hover:text-blue-400">About Us</a></li>
+<li><a href="#portfolio" class="hover:text-blue-400">Portfolio</a></li>
+<li><a href="#contact" class="hover:text-blue-400">Kontak</a></li>
+</ul>
+</div>
+<!-- Menu tampilan mobile -->
+<div id="menu" class="hidden md:hidden bg-slate-800 px-6 pb-4">
+<ul class="flex flex-col gap-4 text-center">
+<li><a href="#home" class="hover:text-blue-400">Home</a></li>
+<li><a href="#about" class="hover:text-blue-400">About Us</a></li>
+<li><a href="#portfolio" class="hover:text-blue-400">Portfolio</a></li>
+<li><a href="#contact" class="hover:text-blue-400">Kontak</a></li>
+</ul>
+</div>
+</nav>
+  </header>
+    <section id="hero" class=" bg-[url(/img/gunung.jpg)] bg-cover h-[80vh] flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-3xl ms:text-4xl md:6xl font-extrabold text-gray-900 mb-4">selamat datang di website kami</h1>
+      <p class="py-3">halaman ini adalah halaman utama website perusahan</p>
+      <button type="button"class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font semibold transition">lihat layanan</button>
+    </section>
+  <footer class="bg-slate-800 text-white text-center p-7 mt-10">
+    <p>&copy;2026 brendkita,semua hak dilindungi</p>
+  </footer>
+  <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    btn.addEventListener('click', () =>{
+      menu.classlist.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
